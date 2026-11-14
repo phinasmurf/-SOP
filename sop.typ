@@ -91,6 +91,10 @@ Noget med analytisk og numerisk optimering.
 Gradient Descent er den mest basale og mest anvendte optimeringsalgortime, derfor er den en god start.
 - Inkluder f(x,y) = x^2 + y^2 som eksempel, og forklar hvordan gradienten bruges til at finde minimum.
 - Vis matematikken og kobl det på mindste kvadrats metode, og hvordan man kan bruge gradient descent til at finde minimum af kvadratsums afvigelsen. 
+- kvadratssums afvigelsen som loss funktion
+
+== Adam
+- Forklar hvordan Adam optimering fungerer og hvorfor det er en forbedring i forhold til Gradient Descent.
 
 == Hvorfor er optimering vigtigt i machine learning
 - Forklar at optimering er vigtigt i machine learning, fordi det bruges til at finde de parametre, der giver den bedst mulige model ud fra store mængder data.
@@ -98,8 +102,44 @@ Gradient Descent er den mest basale og mest anvendte optimeringsalgortime, derfo
 
 
 = Data
+- Skriv om hvordan data genereres, og hvordan det kan bruges til at analysere algoritmen.
+- Henvis til bilag hvor koden til data generering er inkluderet.
+- Hvis hvordan jeg tilføjer støj til data
+
 = Analysering af algoritmen
-= Perspektivering
+Introduktion til hvordan og hvilke algoritmer jeg vil undersøge, hvordan jeg vil lægge vægt på forskellige parametre, og hvordan jeg vil analysere algoritmen.
+- Skrive om hvilken model som algoritmen skal optimere, andengrads og/eller flere?
+- Tabsfunktionen, hvordan beregnes den, og hvorfor er det netop denne som skal minimeres? (skriver jeg hellere om dette i redegørelsen for optimeringsalgoritmen?)
+- Kort om algoritmens hvilke startværdier der anvendes og med hvilken learning rate samt hvor mange iterationer der køres.
+- Vurderingskriterier for algoritmens performance, f.eks. hvor hurtigt den konvergerer, og hvor tæt den kommer på det globale minimum.
+- vurdering af: hvor tæt på den originale model kommer algoritmen
+- vurdering af: hvor goft algoritmen finder minimum af tabsfunktionen, og forklar differencen
+
+== Optimering uden støj
+- Vis hvordan algoritmen optimerer parametrene i en multivariabel model uden støj i datasættet.
+- inkluder grafisk repræsentation af hvordan algoritmen optimerer parametrene.
+* optimeringen* 
+- genering af data ud fra kendt matematisk model
+- startværdier, learning rate, antal iterationer
+- optimeringsprocess, hvordan tilpasser algoritmen sig?
+- undersøg om algoritmen nærmer sig minima og hvor hurtigt den konvergerer. Finder den de originale parametre?
+- Grafisk repræsentation "Vis både modellens tilpasning til datapunkterne og algoritmens bevægelse mod minimum i tabsfunktionen." - chatgpt
+- Vis, modellens tilpasning til datapunkterne og algoritmens bevægelse mod minimum i tabsfunktionen.
+
+== Optimering med stigende støj
+- Analyser hvordan algoritmen optimerer parametrene i en multivariabel model, og undersøg hvordan dens evne til at finde en optimal model påvirkes af stigende støj i datasættet.
+- Sammenlign med hvordan den opførte sig uden støj.
+- hav grafisk repræsentation af hvordan støj påvirker optimeringen.
+- gør det samme som under "optimeringen" men med forskellige støjniveauer, og undersøg hvordan algoritmen opfører sig.
+- kør flere gange med samme støjniveau, og undersøg om algoritmen finder det samme minimum hver gang. Så sætter jeg ikke alle penge på et støjdatasæt, men bliver mere videnskablig
+
+== Optimering med forskellige parametre af algoritmen
+- Undersøg hvordan algoritmens evne til at finde en optimal model påvirkes af forskellige startværdier, learning rates og antal iterationer. Learning rate er dog den der har mest direkte sammenhæng med matematikken.
+
+= Perspektivering af
+Vi har undersøgt at algoritmer bygger på mindste kvadrats metoden, og hvorfor netop det er nemt og hurtigt at bruge. Men er det det eneste som kan danne rygrad af maskinlæring?
+== 
+
 = Konklusion
 
 
