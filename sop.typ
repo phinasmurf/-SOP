@@ -16,11 +16,11 @@ learning. \
 *Hvordan kan jeg minimere kvadratsums afvigelsen ved funktioner af to variable ved hjælp af
 partiel afledte?* \
 
-- Redegør for begreberne funktioner af flere variable og differentation af disse med henblik på bestemmelse af globale og lokale minima og maksima. 
-- Redegør for, matematikken bag en optimeringsalgoritme (f.eks. gradient descent, Adam eller RMSprop) samt for brugen af optimering af multivariable funktioner i machine learning.
-- Generér data, som du kan analysere algoritmen ud fra.
-- Analysér, hvordan din valgte algoritme optimerer parametrene i en multivariabel model, og undersøg, hvordan dens evne til at finde en optimal model påvirkes af stigende støj i datasættet.
-- Perspektivér til, hvordan optimering af multivariable funktioner anvendes til at træne mo- deller inden for machine learning. @jensen2024
+  - Redegør for begreberne funktioner af flere variable og differentation af disse med henblik på bestemmelse af globale og lokale minima og maksima. 
+  - Redegør for matematikken bag en optimeringsalgoritme (f.eks. gradient descent, Adam eller RMSprop) samt for brugen af optimering af multivariable funktioner i machine learning.
+  - Generér data, som du kan analysere algoritmen ud fra.
+  - Analysér, hvordan din valgte algoritme optimerer parametrene i en multivariabel model, og undersøg, hvordan dens evne til at finde en optimal model påvirkes af stigende støj i datasættet.
+  - Perspektivér til, hvordan optimering af multivariable funktioner anvendes til at træne mo- deller inden for machine learning. @jensen2024
 
 #pagebreak()
 
@@ -59,6 +59,7 @@ learning. \
 - Der vil blive genereret data, som algoritmen kan analyseres ud fra.
 - Der vil blive analyséret for, hvordan den valgte algoritme optimerer parametrene i en multivariabel model, og undersøges, hvordan dens evne til at finde en optimal model påvirkes af stigende støj i datasættet.
 - Der vil blive perspektiveret til, hvordan optimering af multivariable funktioner anvendes til at træne modeller inden for machine learning.
+anvendelse  af algoritmen, den virkelige verden
 
 = Metoder
 
@@ -137,8 +138,48 @@ Introduktion til hvordan og hvilke algoritmer jeg vil undersøge, hvordan jeg vi
 - Undersøg hvordan algoritmens evne til at finde en optimal model påvirkes af forskellige startværdier, learning rates og antal iterationer. Learning rate er dog den der har mest direkte sammenhæng med matematikken.
 
 = Perspektivering af
-Vi har undersøgt at algoritmer bygger på mindste kvadrats metoden, og hvorfor netop det er nemt og hurtigt at bruge. Men er det det eneste som kan danne rygrad af maskinlæring?
-== 
+Vi har undersøgt at algoritmer bygger på mindste kvadrats metoden, og hvorfor netop det er nemt og hurtigt at bruge. Men i virkeligheden er machine learning og optimeringsalgoritmer
+langt mere konplicerede end bare at minimere kvadratsummen på et generet datasæt, med eller uden støj.
+Optimering ved machine learning såsom billedgenkendelse, deep learning, sprogbehandling eller generativ AI, er langt mere kompliceret.
+Der er flere tusinde parametre som skal optimeres samtidig med at modellen skal være god til at tilpasse sig ny data. 
+Der skal altså være balance mellem optimering og generalisering.
+- * Hav fokus på at vende tilbage til multivariable funktioner, relevans*
+
+== Machine learning model
+Kort forklaring af (muligvis ikke nødvendig):
+- Machine learning har mange parametre 
+- Modellen bruger parametre til at lave forudsigelser ud fra inputdata
+- Hvad tabsfunktion gør
+- Bruger partielle afledte til at justere parametrene 
+
+== Datamængder og kompleksitet
+- Forskellen  på mit forsøg og store modeller mere konkret. Giv den røde tråd; store datamængder
+til store modeller såsom deep learning der er mindste kvadrat metoden ikke tilstrækkelig.
+- Hvorfor er det på nogle modeller bedre at finde godt lokalt minimum fremfor globalt?
+- Kom ind på at mange parametre med begrænset eller støjende data  fører til dårligere model på ny data
+samt hvorfor det et issue, mht at den skal være god til at generalisere hvis den får ny data.
+Store og variede datasæt reducerer faktisk risiko for overfitting da det er sværere at generalisere
+- Mindste kvadraters metode er ikke utilstrækkelig på store datamængder, men til mere komplekse machine learning modeller kræver andre og mere fleksible tabsfunktioner end kvadratsummen.
+
+== Overfitting og generalisering 
+- Hvordan er dette (ikke) et problem ved få parametre sammen ift. større modeller til fx billedgenkendelse?
+-  Hvad er forskellen og vigtigheden af balancen?
+- Hvorfor er generalisering afgørende i machine learning?
+
+== Lokale og globale minima
+- Hvorfor kan tabsfunktioner være i ml være komplekse?
+- Saddelpunkter ift. lokalt/golbalt minima
+
+== Undgåelse af overfitting
+- Hvordan undgås det?
+-"Regularisering som en ændring af tabsfunktionen. Eventuelt early stopping." - chatGPT forslag, mmeh?
+
+== Hvorfor er optimering så egentlig vigitg?
+- Opsummering af hvorfor optimering ik er ens betydende med god model 
+- Forklaring hvorfor det stadig er vigtigt og "the backbone" af machine learning
+- Optimering er nødvendig, typsik første skridt med god model
+- Optimering $eq.not != $ god model
+- Optimering er grundlaget for læring
 
 = Konklusion
 
