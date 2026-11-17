@@ -62,6 +62,21 @@ learning. \
 anvendelse  af algoritmen, den virkelige verden
 
 = Metoder
+== Matematik 
+- Gør brug af (funktions)modeller
+- Differentation
+- Er der parameteranalyse?
+- grafer 
+- numerisk / analytisk tilgang
+
+== Informatik
+- Python og program ift. algoritmer
+- Overvejelser af hvad jeg vil måle og hvordan er det "godt"?
+- Genering af data 
+- Iterativ process / loop
+- Visualisering af optimeringen i 2 forskellige måder
+- Tuning af parametre
+- 
 
 = Redegørelse for funktioner af flere variable
 En multivariabel funktion er en funktion, der har mere end én uafhængig variabel. En funktion har normalvis kun en uafhængig variabel, men i en multivariabel funktion kan der være to eller flere
@@ -89,7 +104,7 @@ Noget med analytisk og numerisk optimering.
 - Forklar at analytisk metode ik er nødvendig, eller muligt, men numerisk metode er nødvendig, når der er mange variable.
 
 == Matematikken bag Gradient Descent
-Gradient Descent er den mest basale og mest anvendte optimeringsalgortime, derfor er den en god start.
+Gradient Descent er den mest basale og mest anvendte optimeringsalgortime, derfor er den en god start (forklar mere uddybende).
 - Inkluder f(x,y) = x^2 + y^2 som eksempel, og forklar hvordan gradienten bruges til at finde minimum.
 - Vis matematikken og kobl det på mindste kvadrats metode, og hvordan man kan bruge gradient descent til at finde minimum af kvadratsums afvigelsen. 
 - kvadratssums afvigelsen som loss funktion
