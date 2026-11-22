@@ -59,7 +59,6 @@ learning. \
 - Der vil blive genereret data, som algoritmen kan analyseres ud fra.
 - Der vil blive analyséret for, hvordan den valgte algoritme optimerer parametrene i en multivariabel model, og undersøges, hvordan dens evne til at finde en optimal model påvirkes af stigende støj i datasættet.
 - Der vil blive perspektiveret til, hvordan optimering af multivariable funktioner anvendes til at træne modeller inden for machine learning.
-anvendelse  af algoritmen, den virkelige verden
 
 = Metoder
 == Matematik 
@@ -79,10 +78,12 @@ anvendelse  af algoritmen, den virkelige verden
 - 
 
 = Redegørelse for funktioner af flere variable
-En multivariabel funktion er en funktion, der har mere end én uafhængig variabel. En funktion har normalvis kun en uafhængig variabel, men i en multivariabel funktion kan der være to eller flere
+En multivariabel funktion er en funktion, eller en funktion af flere variable, er funktioner der har mere end én uafhængig variabel. Multivariable funktioner har således 3 dimensioner i stedet for de to man typisk kender fra funktioner med en variabel. 
 
 == Lineær regression
+Til at starte med når vi arbejder med funktioner af en variabel 
 - sammenhæng mellem variable, regression(smodel), modellens afvigelser fra observede data
+blød folk op til differentiation, opvarminng f(x,y)=z
 
 == Mindste kvadrats metode
 - Hvordan opstilles en kvadratsums funktion
