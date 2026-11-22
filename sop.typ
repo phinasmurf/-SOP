@@ -119,6 +119,13 @@ Gradient Descent er den mest basale og mest anvendte optimeringsalgortime, derfo
 
 
 = Data
+For at teste min algoritme, valgte jeg at lave et program som kunne lave noget data ud fra en given funktion. Dette gjorde det muligt at styre mængden af støj samt vide med sikkerhed hvor tæt på den originale funktion som gradient descent kommer. 
+I datagenereringsprogrammet er det muligt at styre de forudsatte parametre, støj niveauet og antal datapunkter. 
+== Støj i data
+Støjen i data laves vha. denne linje: \
+`noise =  np.random.normal(0, noise_std, n)`
+Her bestemmer jeg hvor meget støj, noise_std.
+
 - Skriv om hvordan data genereres, og hvordan det kan bruges til at analysere algoritmen.
 - Henvis til bilag hvor koden til data generering er inkluderet.
 - Hvis hvordan jeg tilføjer støj til data

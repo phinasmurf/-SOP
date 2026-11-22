@@ -4,9 +4,9 @@ from pathlib import Path
 import pandas as pd
 
 #Definerer de originale parametre 
-a = 2 
-b = 3
-c = 5
+a = 6
+b = 2
+c = 6
 
 #Indstillinger
 n = 100
