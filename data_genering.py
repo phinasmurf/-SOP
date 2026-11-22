@@ -1,32 +1,56 @@
 import numpy as np
 import matplotlib.pyplot as plt 
+from pathlib import Path
+import pandas as pd
 
-#Definerer den originale funktion
+#Definerer de originale parametre 
 a = 2 
 b = 3
 c = 5
 
-def f(x):
-    return a*x**2 + b*x + c
+#Indstillinger
+n = 100
+noise_std = 10
 
-# Generer x-værdier
-# Linspace parametre: https://numpy.org/devdocs//reference/generated/numpy.linspace.html
-x = np.linspace(-5, 5, 30)
+#Generer inputdata for x værdierne 
+x_1 = np.random.uniform(-5, 5, n)
+x_2 = np.random.uniform(-5, 5, n)
 
-#Generer tilsvarende y-værdier
-y_ideal = f(x)
+#Ideel y-værdi
+y_ideal = a*x_1+b*x_2+c
 
-# Tilføjelse af støj til data
-noise = np.random.normal(0,3,len(x))
+#-----------------Støj genering---------------
+noise =  np.random.normal(0, noise_std, n)
 y_data = y_ideal + noise
 
-#Visualiser data
-plt.plot(x, y_ideal, label="Oprindelig funktion")
-plt.scatter(x, y_data, color="darkred", label="Generede data")
+# Pakker data til algoritmen
+X = np.column_stack((x_1, x_2))
 
-plt.xlabel("x")
+#Gemmer data til csv fil som GD_milti kan læse
+pd.DataFrame({
+    "x1":x_1,
+    "x2":x_2,
+    "y": y_data
+}).to_csv(Path(__file__).with_name("data.csv"), index=False)
+
+
+#Visualiser data
+
+plt.scatter(range(n), y_ideal, label="Ideelle værdier")
+plt.scatter(range(n), y_data, label="Data med støj")
+plt.xlabel("Observation")
 plt.ylabel("y")
-plt.title("Generede data ud fra andengradspolynomie")
 plt.legend()
-plt.grid()
 plt.show()
+
+
+#Visualiser den oprindelige funktion
+#plt.plot(X, y_ideal, label="Oprindelig funktion")
+#plt.scatter(X, y_data, color="red", label="Generede data")
+#
+#plt.xlabel("x")
+#plt.ylabel("y")
+#plt.title("Generede data ud fra andengradspolynomie")
+#plt.legend()
+#plt.grid()
+#plt.show()

@@ -3,15 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from pathlib import Path
 
-# Rækker = observationer, kolonner = inputvariable
-X = np.array([
-    [1.0, 2.0],
-    [2.0, 1.0],
-    [3.0, 4.0],
-])
-y = np.array([5.0, 4.0, 11.0])  # observerede resultater
-
-# Parametre jeg lan skrue på i gradient descent
+# Parametre jeg kan skrue på i gradient descent
 learning_rate = 0.01
 iterations = 1000
 
