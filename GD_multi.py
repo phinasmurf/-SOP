@@ -44,7 +44,7 @@ def gradient_descent(X, y, learning_rate=0.001, iterations=1000):
         w -= learning_rate * dw
         b -= learning_rate * db
 
-        # Beregn tabsfunktion en efter opdateringen mht mindste kvadraters metode
+        # Beregn tabsfunktion en efter opdateringen mht mindste kvadraters metode 
         sum_squared_errors = np.sum((X @ w + b - y) ** 2)
         cost_history.append(sum_squared_errors)
 
